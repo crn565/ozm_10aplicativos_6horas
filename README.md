@@ -55,25 +55,26 @@ Los aplicativos  usados en el experimento son los siguintes:
 11 -  Freezer (congelador)
 
 
-## RESULTADOS
+## RESULTADOS FINALES
 
 
-Para el algoritmo combinatorio se obtienen estos resultados
+Para el algoritmo combinatorio se obtienen los siguintes resultados:
 
 
 ![image](https://user-images.githubusercontent.com/75988158/231506370-213a3780-0ef2-41eb-9542-5520cdeaa02a.png)
 
-Para el algoritmo FHMM se obtienen estos resultados
+Para el algoritmo FHMM se obtienen estos resultados limitados por la falta de memoria para ejecutar el algoritmo en tiempos de muestreo inferiores a 5 minutos:
 
 ![image](https://user-images.githubusercontent.com/75988158/231506191-cecb7ca8-4f8d-4410-8355-af264ff09280.png)
 
+Para que sirva de referencia, se muestran  los resultados de aplicar las metricas para los ficheros originales sin el offset de 2+2  y que presentamos en el respositorio https://github.com/crn565/ozm10_appliances_transitorios
+![image](https://user-images.githubusercontent.com/75988158/231507441-839c8421-3e21-40b2-b0ba-8ff544f40600.png)
 
-
-
-
-En resumen  estos son los resultados de las metricas para el algoritmo CO, tiempo de muestreo 60"  y metodo  first:
-
+Y  estos son los resultados de las metricas para el algoritmo CO, tiempo de muestreo 60"  y metodo  first para los nuevos datos:
 ![image](https://user-images.githubusercontent.com/75988158/231506558-cf2e440a-b937-4b5b-8372-25a59be04fb7.png)
 
+Como se puede apreciar,  a pesar de que el tiempo de las muestras se ha multiplicado por tres, los resultados de las metricas apenas mejoran , lo que demuestra que en realidad para mejorar un modelo no se necesitan mas medidas , sino que tambien estas sean diferentes y variadas. 
 
-Las conclusiones obtenidas  son que resumidamente al repicar las medidas NO mejoran las metricas de NILMTK  con los algoritmos CO y FHMM , asi como tampoco mejoran las predicciones. Ademas, computacionalemente para ejecutar el algoritmo FHMM  se requiere mas de 32GB de RAM para procesar las medidas.  
+
+
+Las conclusiones obtenidas pues con este experimento es que resumidamente al repicar las medidas NO mejoran las metricas de NILMTK  con los algoritmos CO y FHMM , asi como tampoco mejoran las predicciones. Ademas, computacionalemente para ejecutar el algoritmo FHMM  se requiere mas de 32GB de RAM para procesar las medidas.  

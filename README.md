@@ -4,7 +4,7 @@ Medidas con 3 ozm  trifasicos conformando en total  10 aplicativos  mas el agreg
 
 Se realiza  en los cuadernos adjuntos a este repositorio el analisis de las medidas de 10 aplicativos incluyendo transitorios  hasta el orden 150 de tension, corriente y potencia. Las Medidas  se realizan con 3  OpenZMeter  Trifásicos  (cada uno con 4 canales de medida)  conformando asi en total  11 canales de medida  que se distribuyen en los 10 aplicativos, mas el agregado. Las medidas corresponden a W, VAR, VA,f, VLN,PF y A, mas los transititoros  hasta el orden 150 de W, V y A,   todas con un marca de tiempo (Timestamp) de 13 dígitos tipo UNIX Epox.
 
-Las medidas se realizaron el 10 de Marzo de 2033  en el Laboratorio de Electrotecnia de la  Escuela de Ingenieria Industrial de la Universidad de Almeria.Las medidas reales fueron tomadas entre las 11:10 y las 13:12 lo que conforma . Se agrego un doble offset de  unas 2h para  crear un nuevo DS  compuesto por las medidas reales, las medidas reales +2h y las medidas reales +4h.
+Las medidas se realizaron el 10 de Marzo de 2033  en el Laboratorio de Electrotecnia de la  Escuela de Ingenieria Industrial de la Universidad de Almeria.Las medidas reales fueron tomadas entre las 11:10 y las 13:12 lo que conforma 5818000 milisegundos ( ver cálculo mas abajo). Para conformar 6 horas se agrego un doble offset de  unas 2h para  crear un nuevo DS  compuesto por las medidas reales, las medidas reales +2h y las medidas reales +4h.
 
 Para la adicion de dos offset a los ficheros de medida  se considero el siguinte cálculo:¶
 
@@ -13,7 +13,7 @@ Para la adicion de dos offset a los ficheros de medida  se considero el siguinte
 - Para 11:10:38, hay 11 horas * 60 minutos/hora * 60 segundos/minuto * 1000 milisegundos/segundo + 10 minutos * 60 segundos/minuto * 1000 milisegundos/segundo + 38 segundos * 1000 milisegundos/segundo = 40238000 milisegundos.
 
 Es decir, para calcular la diferencia entre ambas horas, simplemente restamos el número de milisegundos del segundo tiempo al número de milisegundos del primer tiempo:
-46056000 milisegundos - 40238000 milisegundos = 5818000 milisegundos.  Por tanto para ampliar el tiempo de muestras y demostrar  que las medidas deben ser diferentes, a los ficheros csv originales de las medidas, se le añaden nuevos ficheros csv identicos,  pero  con  dos desplazamientos en el campo timestamp ( es decir en un caso sumamnamos 58180000 ms y otro sumamos 2 x 5818000 ms).
+46056000 milisegundos - 40238000 milisegundos = 5818000 milisegundos.  Por tanto para ampliar el tiempo de muestras y demostrar  que las medidas deben ser diferentes, a los ficheros csv originales de las medidas, se le añaden nuevos ficheros csv identicos,  pero  con  dos desplazamientos en el campo timestamp ( es decir en un caso sumamamos 58180000 ms y otro sumamos 2 x 5818000 ms).
 
 
   
@@ -74,10 +74,10 @@ Para el algoritmo FHMM se obtienen estos resultados
 
 
 
-FHMM_mean	FHMM_median	FHMM_first
-5min	25.83	2.78	2.18
-10min	2.37	2.12	2.10
-15min	2.06	2.07	2.07
+      FHMM_mean	  FHMM_median	FHMM_first
+5min	25.83	  2.78	        2.18
+10min	2.37	  2.12	        2.10
+15min	2.06	  2.07	        2.07
 
 
 En resumen  estos son los resultados de las metricas para el algoritmo CO, tiempo de muestreo 60"  y metodo  first:

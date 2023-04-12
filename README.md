@@ -60,33 +60,20 @@ Los aplicativos  usados en el experimento son los siguintes:
 
 Para el algoritmo combinatorio se obtienen estos resultados
 
-CO_mean	CO_median	CO_first
-1s	4.06	3.75	3.75
-10s	2.45	2.98	2.25
-30s	2.10	2.07	2.11
-60s	2.05	3.31	2.30
-5min	2.02	1.84	1.85
-10min	1.90	1.78	1.80
-15min	1.83	1.87	2.04
-30min	2.09	2.14	2.38
+
+![image](https://user-images.githubusercontent.com/75988158/231506370-213a3780-0ef2-41eb-9542-5520cdeaa02a.png)
 
 Para el algoritmo FHMM se obtienen estos resultados
 
+![image](https://user-images.githubusercontent.com/75988158/231506191-cecb7ca8-4f8d-4410-8355-af264ff09280.png)
 
 
-      FHMM_mean	  FHMM_median	FHMM_first
-5min	25.83	  2.78	        2.18
-10min	2.37	  2.12	        2.10
-15min	2.06	  2.07	        2.07
+
 
 
 En resumen  estos son los resultados de las metricas para el algoritmo CO, tiempo de muestreo 60"  y metodo  first:
 
-	  Electric furnace	Microwave	Television	Kettle	Vacuum cleaner	Electric space heater	Electric shower heater	Fan	Fridge	Freezer
-F1	0.129	            0.400	     0.519	     0.061	0.424	          0.222	                0.333	                 0.574	0.455	  0.400
-EAE	0.003	            0.077	     0.003	     0.050	0.025         	0.192                	0.005	                 0.002	0.061	  0.089
-MNEAP	1.808         	1.487	     0.847	     2.292	1.309	          1.059	                1.400	                 0.680	2.987	  5.608
-RMSE	877.262	        514.697	   23.137	    615.359	342.614       	994.239	             734.337	            19.083	153.247	 281.465
+![image](https://user-images.githubusercontent.com/75988158/231506558-cf2e440a-b937-4b5b-8372-25a59be04fb7.png)
 
 
 Las conclusiones obtenidas  son que resumidamente al repicar las medidas NO mejoran las metricas de NILMTK  con los algoritmos CO y FHMM , asi como tampoco mejoran las predicciones. Ademas, computacionalemente para ejecutar el algoritmo FHMM  se requiere mas de 32GB de RAM para procesar las medidas.  

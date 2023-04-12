@@ -87,4 +87,13 @@ Como se puede apreciar,  a pesar de que el tiempo de las muestras se ha multipli
 
 ## RESUMEN
 
-Las conclusiones obtenidas pues con este experimento es que resumidamente al repicar las medidas NO mejoran las metricas de NILMTK  con los algoritmos CO y FHMM , asi como tampoco mejoran las predicciones. Ademas, computacionalemente para ejecutar el algoritmo FHMM  se requiere mas de 32GB de RAM para procesar las medidas.  
+Las conclusiones obtenidas pues con este experimento es que resumidamente al repicar las medidas NO mejoran las metricas de NILMTK  con los algoritmos CO y FHMM , asi como tampoco mejoran las predicciones. 
+
+- La precisión de los modelos en identificar los patrones de consumo de energía de los electrodomésticos individuales es baja, lo que se refleja en un bajo valor de F1.
+
+- Los modelos son buenos para estimar la cantidad total de energía consumida en el hogar, como lo indican los buenos valores de EAE y MNEAP.
+
+- A pesar de que los modelos son capaces de identificar diferentes patrones de consumo de energía en el hogar,sus capacidades para predecir la cantidad exacta de energía consumida por los electrodomésticos individuales es baja, lo que se refleja en un alto valor de RMSE.
+
+
+Ademas, computacionalemente para ejecutar el algoritmo FHMM  se requiere mas de 32GB de RAM para procesar las medidas.  
